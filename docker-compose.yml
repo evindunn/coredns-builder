@@ -1,0 +1,11 @@
+---
+
+version: "3.7"
+services:
+  builder:
+    image: coredns-builder
+    build:
+      context: .
+    volumes:
+      - "./dist:/dist"
+      - "/var/run/docker.sock:/var/run/docker.sock"
